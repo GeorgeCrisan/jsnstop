@@ -18,6 +18,6 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js"
+    "start": "nodemon keystone.js"
   }
 }
