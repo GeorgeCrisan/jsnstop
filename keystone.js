@@ -12,6 +12,7 @@ var keystone = require('keystone');
 keystone.init({
 	'name': 'jsnstop',
 	'brand': 'jsnstop',
+	'sass':'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
@@ -21,7 +22,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 });
- 
+
 // Load your project's Models
 keystone.import('models');
 
