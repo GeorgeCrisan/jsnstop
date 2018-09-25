@@ -2,13 +2,19 @@ extends ../layouts/default
 
 block content
 	.container: .jumbotron
-		img(src='/images/logo.png', width='360')
-		h1 Welcome
-		
-		p It includes the latest versions of 
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+		.logo-welcome
+			img(src='/images/logo.png', width='360')
+			ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-2372442392819950', data-ad-slot='7950479822', data-ad-format='auto', data-full-width-responsive='true')
+			
+		h1 Welcome	
+		p 
+			| Web development tutorials about front-end, back-end and how to set up building tools.
+			<br/>
+			| The aim is to learn and use latest in terms of web development technologies.
+			<br/>
+			|This blog is built on top of<a href='http://keystonejs.com/' target='_blank'> KeystoneJS </a>, <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
 			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		p Visit my <a href='https://github.com/GeorgeCrisanb' target='_blank'>GitHub page </a> and see more of my work.
 		hr
 		if user && user.canAccessKeystone
 			p
@@ -16,10 +22,12 @@ block content
 		else
 			.container-img
 				img(src="/images/icons/ico1.png").index-ico
+				img(src="/images/icons/ico6.png").index-ico
 				img(class='index-ico' src="/images/icons/ico3.png")
-				img(src="/images/icons/ico4.png").index-ico
 				img(src="/images/icons/ico5.png").index-ico
-				img(src="/images/icons/ico6.ico").index-ico
+				img(src="/images/icons/ico4.png").index-ico
+				
+				
 
 			
 		hr
