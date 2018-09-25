@@ -3,6 +3,7 @@ const nodemon = require('gulp-nodemon');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
 let reload = browserSync.reload;
     
 //declare the paths in paths object for DRY
@@ -10,7 +11,8 @@ let paths = {
               'src': ['./models/**/*.js','./routes/**/*.js','keystone.js','package.json','templates/**'],
 
               'style' : {
-                     input: ['./public/styles/**/*.+(sass|scss)'],
+                     input: ['./public/styles/{*.sass,_*.sass}'],
+                     inputPartials: ['./public/styles/site/{*.sass,_*.sass}'],
                      output: './public/styles/'
               }
 }
@@ -36,6 +38,7 @@ gulp.task('browser-sync',['nodemon'],()=>{
 
 gulp.task('sass',()=>{
       gulp.src(paths.style.input)
+          .pipe(plumber())
           .pipe(sass({outputStyle: 'compressed', errLogToConsole: true}))
           .on('error',catchErr)
           .pipe(autoprefixer(autoprefixerOptions))
@@ -60,8 +63,9 @@ gulp.task('nodemon',(cb)=>{
 });
 
 gulp.task('watch',()=>{
-       gulp.watch(paths.style.input,['sass']);
+       gulp.watch([paths.style.input,paths.style.inputPartials],['sass']);
        gulp.watch(paths.src, reload);
+       
 });
 
-gulp.task('default',['browser-sync','watch']);
+gulp.task('start',['browser-sync','watch']);

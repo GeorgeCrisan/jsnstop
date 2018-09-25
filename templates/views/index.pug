@@ -2,9 +2,9 @@ extends ../layouts/default
 
 block content
 	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
+		img(src='/images/logo.png', width='360')
 		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		
 		p It includes the latest versions of 
 			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
 			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
@@ -14,7 +14,13 @@ block content
 			p
 				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
 		else
-			p We have created a default Admin user for you with.
+			.container-img
+				img(src="/images/icons/ico1.png").index-ico
+				img(class='index-ico' src="/images/icons/ico3.png")
+				img(src="/images/icons/ico4.png").index-ico
+				img(src="/images/icons/ico5.png").index-ico
+				img(src="/images/icons/ico6.ico").index-ico
+
 			
 		hr
 		p Please visit my Portfolio website at 
