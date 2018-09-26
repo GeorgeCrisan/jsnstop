@@ -31,24 +31,64 @@
     position: relative
     top: 0px
   
+.x-transform
+  border: none
+  .icon-bar 
+    width: 30px
+  .icon-bar:nth-child(2)
+    transition-duration: 0.5s
+    transform: translateY(5px) rotate(135deg);
+  .icon-bar:nth-child(3) 
+    display: none
+  .icon-bar:nth-child(4)  
+    transition-duration: 0.5s
+    transform: translateY(-1px) rotate(-135deg);
 
 .navbar-default .navbar-nav>li>a 
   color: white
 
   &:hover 
     color: rgba(30,67,153,1)
-    
     transition-duration: 0.3s
     
 
 @media all and (max-width: 768px)
+
+  .navbar-toggle
+    border: none
+    .icon-bar 
+      width: 30px
+
+
+
+
+  .navbar-toggle:active,.navbar-toggle:hover, .navbar-toggle:focus ,.navbar-toggle:visited
+    background: rgba(255,255,255,0.0) !important
+    border: none
   .active
     a
-      margin-left: 20px
+      margin-left: 30px
      
   .custom-nav-element  
     li 
-      margin: 10px 0
+      margin: 10px 0px
       width: 95%
       a
         padding: 0 0 0 20px     
+
+
+@media all and (min-width: 768px) and (max-width: 769px)
+  .active
+    a
+      margin-left: 0px
+  .navbar-collapse.collapse
+    display: flex !important
+    flex-flow: row nowrap
+    ul 
+      display: flex
+      margin: 5px 0 0 0
+      li 
+        width: 90px
+        text-align: center
+        a 
+          padding: 0
