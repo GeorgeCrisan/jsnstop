@@ -27,6 +27,7 @@ block intro
 		h1= data.category ? data.category.name : 'Blog'
 
 block content
+	
 	.container: .row
 		.col-sm-8.col-md-9
 			if filters.category && !data.category
@@ -73,3 +74,8 @@ block content
 					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Categories
 					each cat in data.categories
 						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
+				.google-addds
+					script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+					ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-2372442392819950', data-ad-slot='7950479822', data-ad-format='auto', data-full-width-responsive='true')
+					script.
+						(adsbygoogle = window.adsbygoogle || []).push({});
