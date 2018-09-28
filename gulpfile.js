@@ -4,6 +4,9 @@ const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
+const babel = require('gulp-babel');
+const uglifyjs = require('gulp-uglify');
+
 let reload = browserSync.reload;
     
 //declare the paths in paths object for DRY
@@ -36,6 +39,16 @@ gulp.task('browser-sync',['nodemon'],()=>{
      });
 });
 
+gulp.task('javascript',()=>{
+     return gulp.src('public/js/main.js')
+            .pipe(babel({
+                presets: ["babel-preset-env"]
+            }))
+            .pipe(uglifyjs())
+            .pipe(gulp.dest('public/js/distjs'))
+            .pipe(browserSync.stream())
+})
+
 gulp.task('sass',()=>{
       gulp.src(paths.style.input)
           .pipe(plumber())
@@ -64,6 +77,7 @@ gulp.task('nodemon',(cb)=>{
 
 gulp.task('watch',()=>{
        gulp.watch([paths.style.input,paths.style.inputPartials],['sass']);
+       gulp.watch('public/js/main.js',['javascript']);
        gulp.watch(paths.src, reload);
        
 });

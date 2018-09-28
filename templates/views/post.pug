@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block content
-	.container.post-sass: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+	.container.post-adds: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 		script(async='',src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 		ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-2372442392819950', data-ad-slot='7950479822', data-ad-format='auto', data-full-width-responsive='true')
 		script.
@@ -32,7 +32,7 @@ block content
 					if data.post.image.exists
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
-		.container: .row: .col-sm-10.col-sm-offset-1.col-md-6
+		.container.post-adds: .row: .col-sm-10.col-sm-offset-1.col-md-6
 			script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 			ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-2372442392819950', data-ad-slot='7950479822', data-ad-format='auto', data-full-width-responsive='true')
 			script.
