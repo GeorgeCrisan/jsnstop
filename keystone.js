@@ -4,6 +4,8 @@ require('dotenv').config();
 
 // Require keystone
 var keystone = require('keystone');
+let session = require('express-session');
+let MongoStore = require("connect-mongo")(session);
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -21,6 +23,13 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'session store': (session)=>{
+		return new MongoStore({
+			url: process.env.MONGOLAB_URI,
+			ttl: 14 * 24 * 60 * 60 // = 14 days. Default
+		})
+		  
+	},
 });
 
 // Load your project's Models
