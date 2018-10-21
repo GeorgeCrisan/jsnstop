@@ -16,14 +16,8 @@ keystone.init({
 	'wysiwyg cloudinary images': true,
 	'wysiwyg override toolbar': true,
 	'wysiwyg skin': 'lightgray',
-	'wysiwyg additional buttons': 'searchreplace visualchars,'
- 	+ ' charmap ltr rtl pagebreak paste, forecolor backcolor,'
- 	+' emoticons media, preview print codesample',
-	'wysiwyg additional plugins': 'example, table, advlist, anchor,'
- 	  + ' autolink, autosave, bbcode, charmap, contextmenu, codesample'
- 	  + ' directionality, emoticons, fullpage, hr, media, pagebreak,'
- 	  + ' paste, preview, print, searchreplace, textcolor,'
- 	  + ' visualblocks, visualchars, wordcount',
+	'wysiwyg additional buttons': 'codesample',
+	'wysiwyg additional plugins': 'codesample',
 	'name': 'jsnstop',
 	'brand': 'jsnstop',
 	'sass':'public',
