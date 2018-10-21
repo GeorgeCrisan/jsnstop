@@ -13,8 +13,7 @@ let MongoStore = require("connect-mongo")(session);
 
 keystone.init({
 	'wysiwyg override toolbar': false,
-	'wysiwyg cloudinary images': true,
-	'wysiwyg override toolbar': true,
+	'wysiwyg cloudinary images': true, 
 	'wysiwyg skin': 'lightgray',
 	'wysiwyg additional buttons': 'codesample',
 	'wysiwyg additional plugins': 'codesample',
