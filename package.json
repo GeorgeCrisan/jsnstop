@@ -22,13 +22,13 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "eslint": "3.15.0",
     "eslint-config-keystone": "3.0.0",
     "eslint-plugin-react": "^5.1.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-nodemon": "^2.2.1",
+    "gulp-nodemon": "^2.4.1",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1",
     "gulp-shell": "^0.6.5",
