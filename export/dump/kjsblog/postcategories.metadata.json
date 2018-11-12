@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"kjsblog.postcategories"},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"kjsblog.postcategories","background":true}],"uuid":"ee1304981b3542968a9a234c1e050928"}

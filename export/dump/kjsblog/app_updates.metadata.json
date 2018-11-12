@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"kjsblog.app_updates"},{"v":2,"key":{"key":1},"name":"key_1","ns":"kjsblog.app_updates","background":true}],"uuid":"f4da32f98db742efa0c0a6edd83f11b4"}
