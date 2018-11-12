@@ -1,21 +1,30 @@
 .post-sass
   background: rgba(245, 245, 238,0.98)
+  border-radius: 5px
   p 
     padding: 0 10px 0 10px   
     font-size: 16px
-
+  article
+    a[href='/blog']
+      margin-left: 0
+      position: relative
+      top: 20px
 .adsbygoogle 
   margin: 10px auto 20px auto
 
 .post 
   margin: 20px 0
-  border: 1px solid grey
   box-sizing: border-box
   padding: 0 10px 50px 10px 
   border-radius: 5px
   &>img
     border-radius: 5px
     border: 1px solid grey
+
+.image-wrap
+  img 
+    border: 1px solid grey   
+    margin: auto
 .code-toolbar
   pre
     font-size: 16px !important
