@@ -3,12 +3,18 @@
     color: white
   h4
     color: white 
-.blog 
+.blog
+  .post 
+    .img 
+      height: 80%
+      width: 30%
+      margin-left: 10px
+
 .post
   background: rgba(245, 245, 238,0.98)
   min-height: 320px 
   h2 
-    padding: 20px 20px 0 20px
+    padding: 20px 20px 20px 20px
     margin: 0
     a 
       text-align: center
@@ -24,9 +30,7 @@
   p 
     margin-left: 20px
    
-  img 
-    height: 80%
-    width: 100%
+  
        
 .read-more
   position: absolute
@@ -50,11 +54,18 @@
 
 
 @media all and (max-width: 768px)  
+  .read-more
+    position: relative
+    top: 30px
+    left: 0px 
+    margin: auto
+    a 
+      text-align: left
   .blog .post
     background: rgba(245, 245, 238,0.98)
     min-height: 340px 
     h2 
-      padding: 40px 40px 0 40px
+      padding: 20px 20px 0 20px
       margin: 0
       font-size: 20px
       
@@ -67,14 +78,11 @@
       font-size: 12px
     p
     img 
-      margin: 10px 10px 10px 0px  
+      margin: 10px 10px 10px 10px  
       width: 40%
       max-width: 50%
+
        
-  .read-more
-    position: relative
-    left: 20px 
-    bottom: 10px
 
   .google-addds
     position: static
