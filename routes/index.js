@@ -17,7 +17,7 @@
  * See the Express application routing documentation for more information:
  * http://expressjs.com/api.html#app.VERB
  */
-
+const path = require('path');
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
@@ -38,6 +38,19 @@ exports = module.exports = function (app) {
 	app.get('/blog/:category?', routes.views.blog);
 	//app.get('/pages/:page', routes.views.page);
 	app.get('/blog/post/:post', routes.views.post);
+
+	
+var options = {
+  root: path.join(__dirname, '/public'),
+  headers: {
+    'Content-Type': 'text/plain;charset=UTF-8',
+  }
+};
+
+app.get('/ads.txt', (req, res) => (
+  res.status(200).sendFile('ads.txt', options)
+));
+
 	app.all('/contact', routes.views.contact);
 	
 
